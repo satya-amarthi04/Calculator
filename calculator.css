@@ -1,0 +1,116 @@
+/* Resetting default margin and padding for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and overall page styling */
+  body {
+     /* Font for the whole body */
+    background-color: #f4f4f4; /* Light gray background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+  }
+  
+  /* Container styling for the calculator */
+  .calculator-container {
+    width: 320px; /* Fixed width for the calculator */
+    background-color: #fff; /* White background for the calculator */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+  }
+  
+  /* Display area styling */
+  .display {
+    width: 100%; /* Full width of the container */
+    height: 50px; /* Set height of the display area */
+    font-size: 24px; /* Font size for numbers */
+    text-align: right; /* Right-align the text in the display */
+    padding: 10px;
+    background-color: #f9f9f9; /* Light background for the display */
+    border: 1px solid #ccc; /* Border around the display */
+    border-radius: 5px; /* Rounded corners for the display */
+    margin-bottom: 20px; /* Space below the display */
+    color: #333; /* Dark text color */
+  }
+  
+  /* Button layout in a grid (4 columns for calculator layout) */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-gap: 10px; /* Gap between buttons */
+    width: 100%;
+  }
+  
+  /* General button styling */
+  .btn {
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Border around each button */
+    border-radius: 5px; /* Rounded corners for buttons */
+    font-size: 18px; /* Font size for button text */
+    padding: 20px; /* Padding inside the buttons */
+    text-align: center; /* Center-align the text inside buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover effect for buttons */
+  .btn:hover {
+    background-color: #ddd; /* Darker gray on hover */
+  }
+  
+  /* Active state for buttons (when clicked) */
+  .btn:active {
+    background-color: #bbb; /* Even darker on click */
+  }
+  
+  /* Styling for operator buttons (addition, subtraction, etc.) */
+  .btn.operator {
+    background-color: #f9a825; /* Yellow background for operators */
+    color: white; /* White text */
+  }
+  
+  .btn.operator:hover {
+    background-color: #f57f17; /* Darker yellow on hover */
+  }
+  
+  .btn.operator:active {
+    background-color: #ff6f00; /* Even darker on click */
+  }
+  
+  /* Styling for the 'C' (Clear) and 'Backspace' buttons */
+  .btn.clear {
+    background-color: #d32f2f; /* Red background for clear */
+    color: white; /* White text */
+  }
+  
+  .btn.clear:hover {
+    background-color: #c62828; /* Darker red on hover */
+  }
+  
+  .btn.clear:active {
+    background-color: #b71c1c; /* Even darker red on click */
+  }
+  
+  /* Styling for the 'Equals' button */
+  .btn.equals {
+    background-color: #388e3c; /* Green background for equals */
+    color: white; /* White text */
+  }
+  
+  .btn.equals:hover {
+    background-color: #2c6b2f; /* Darker green on hover */
+  }
+  
+  .btn.equals:active {
+    background-color: #1b5e20; /* Even darker green on click */
+  }
